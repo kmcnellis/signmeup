@@ -12,6 +12,14 @@ var UserSchema = new Schema({
     type: String,
     default: 'user'
   },
+  age: String,
+  street: String,
+  city: String,
+  state: {
+    type: String
+  },
+  zip: String,
+  phone: String,
   hashedPassword: String,
   provider: String,
   salt: String,
@@ -74,6 +82,49 @@ UserSchema
     if (authTypes.indexOf(this.provider) !== -1) return true;
     return hashedPassword.length;
   }, 'Password cannot be blank');
+
+UserSchema
+  .path('age')
+  .validate(function(age){
+    if (authTypes.indexOf(this.provider) !== -1) return true;
+    return age.length;
+  },  'Age cannot be blank');
+
+UserSchema
+  .path('street')
+  .validate(function(street){
+    if (authTypes.indexOf(this.provider) !== -1) return true;
+    return street.length;
+  }, 'Street cannot be blank');
+
+UserSchema
+  .path('city')
+  .validate(function(city){
+    if(authTypes.indexOf(this.provider) !== -1) return true;
+    return city.length;
+  }, 'City cannot be blank');
+
+UserSchema
+  .path('state')
+  .validate(function(state){
+    if(authTypes.indexOf(this.provider) !== -1) return true;
+    return state.length;
+  }, 'State cannot be blank');
+
+UserSchema
+  .path('zip')
+  .validate(function(zip){
+    if(authTypes.indexOf(this.provider) !== -1) return true;
+    return zip.length;
+  }, 'Zip code cannot be blank');
+
+UserSchema
+  .path('phone')
+  .validate(function(phone){
+    if(authTypes.indexOf(this.provider) !== -1) return true;
+    return phone.length;
+  }, 'Phone number cannot be blank');
+
 
 // Validate email is not taken
 UserSchema
