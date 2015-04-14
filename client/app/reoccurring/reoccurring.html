@@ -1,0 +1,58 @@
+<!-- including the other .js file -->
+<div ng-include="'client/components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h2>Sign Up for Reoccurring Events</h2>
+  </div>
+</header>
+
+<div class="list-group">
+ 	<div class="container">
+  		<div class="row">
+  			<h2 class="page-header">Pick a day of the week:</h2>
+  			<section ng-controller="TabController as tab">
+  				<ul class="nav nav-pills">
+  					<!-- Day of week Tabs -->
+		          <li ng-class= "{ active:tab.isSet(1)}">
+		            <a href ng-click="tab.setTab(1)">Monday</a></li>
+		          <li ng-class= "{ active:tab.isSet(2)}">
+		            <a href ng-click="tab.setTab(2)">Tuesday</a></li>
+		          <li ng-class= "{ active:tab.isSet(3)}">
+		            <a href ng-click="tab.setTab(3)">Wednesday</a></li>
+		          <li ng-class= "{ active:tab.isSet(4)}">
+		            <a href ng-click="tab.setTab(4)">Thursday</a></li>
+		          <li ng-class= "{ active:tab.isSet(5)}">
+		            <a href ng-click="tab.setTab(5)">Friday</a></li>
+		          <li ng-class= "{ active:tab.isSet(6)}">
+		            <a href ng-click="tab.setTab(6)">Saturday</a></li>
+		          <li ng-class= "{ active:tab.isSet(7)}">
+		            <a href ng-click="tab.setTab(7)">Sunday</a></li>
+		      </ul>
+          <!-- Monday Tab -->
+        <div ng-show = "tab.isSet(1)">
+			     <h3>Volunteer Times on Monday: </h3>
+           <div ng-repeat="day in Monday">
+                <blockquote>{{time}}</blockquote>
+                <p>{{job}}</p>
+           </div>
+				</div>
+        <!-- Tuesday Tab -->
+        <div ng-show = "tab.isSet(2)">
+           <h3>Volunteer Times on Tuesday: </h3>
+           <div ng-repeat="day in Monday">
+                <blockquote>{{time}}</blockquote>
+                <p>{{job}}</p>
+           </div>
+        </div>
+	</div>
+</div>
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer>
+
+
