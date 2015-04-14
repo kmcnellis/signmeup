@@ -1,5 +1,5 @@
 <!-- including the other .js file -->
-<div ng-include="'client/components/navbar/navbar.html'"></div>
+<div ng-include="'components/navbar/navbar.html'"></div>
 
 <header class="hero-unit" id="banner">
   <div class="container">
@@ -11,41 +11,93 @@
  	<div class="container">
   		<div class="row">
   			<h2 class="page-header">Pick a day of the week:</h2>
-  			<section ng-controller="TabController as tab">
+
+  			<section class= "tab" >
   				<ul class="nav nav-pills">
   					<!-- Day of week Tabs -->
-		          <li ng-class= "{ active:tab.isSet(1)}">
-		            <a href ng-click="tab.setTab(1)">Monday</a></li>
-		          <li ng-class= "{ active:tab.isSet(2)}">
-		            <a href ng-click="tab.setTab(2)">Tuesday</a></li>
-		          <li ng-class= "{ active:tab.isSet(3)}">
-		            <a href ng-click="tab.setTab(3)">Wednesday</a></li>
-		          <li ng-class= "{ active:tab.isSet(4)}">
-		            <a href ng-click="tab.setTab(4)">Thursday</a></li>
-		          <li ng-class= "{ active:tab.isSet(5)}">
-		            <a href ng-click="tab.setTab(5)">Friday</a></li>
-		          <li ng-class= "{ active:tab.isSet(6)}">
-		            <a href ng-click="tab.setTab(6)">Saturday</a></li>
-		          <li ng-class= "{ active:tab.isSet(7)}">
-		            <a href ng-click="tab.setTab(7)">Sunday</a></li>
+		          <li ng-class= "{ active:isSet(1)}">
+		            <a href ng-click="setTab(1)">Monday</a> 
+              </li>
+		          <li ng-class= "{ active:isSet(2)}">
+		            <a href ng-click="setTab(2)">Tuesday</a>
+              </li>
+		          <li ng-class= "{ active:isSet(3)}">
+		            <a href ng-click="setTab(3)">Wednesday</a>
+              </li>
+		          <li ng-class= "{ active:isSet(4)}">
+		            <a href ng-click="setTab(4)">Thursday</a>
+              </li>
+		          <li ng-class= "{ active:isSet(5)}">
+		            <a href ng-click="setTab(5)">Friday</a>
+              </li>
+		          <li ng-class= "{ active:isSet(6)}">
+		            <a href ng-click="setTab(6)">Saturday</a>
+              </li>
+		          <li ng-class= "{ active:isSet(7)}">
+		            <a href ng-click="setTab(7)">Sunday</a>
+              </li>
 		      </ul>
+
           <!-- Monday Tab -->
-        <div ng-show = "tab.isSet(1)">
-			     <h3>Volunteer Times on Monday: </h3>
-           <div ng-repeat="day in Monday">
-                <blockquote>{{time}}</blockquote>
-                <p>{{job}}</p>
-           </div>
-				</div>
-        <!-- Tuesday Tab -->
-        <div ng-show = "tab.isSet(2)">
-           <h3>Volunteer Times on Tuesday: </h3>
-           <div ng-repeat="day in Monday">
-                <blockquote>{{time}}</blockquote>
-                <p>{{job}}</p>
-           </div>
-        </div>
+          <div ng-show = "isSet(1)">
+			      <h3>Volunteer Times on Monday: </h3>
+            <li ng-repeat="day in data">
+                <blockquote>{{day.time}} {{day.job}}</blockquote>  
+            </li> 
+				  </div>
+
+          <!-- Tuesday Tab -->
+          <div ng-show = "isSet(2)">
+            <h3>Volunteer Times on Tuesday: </h3>
+            <!-- <li ng-repeat="day in data">
+                <blockquote>{{day.time}} {{day.job}}</blockquote>
+            </li> -->
+          </div>
+
+          <!-- Wednesday Tab -->
+          <div ng-show = "isSet(3)">
+            <h3>Volunteer Times on Wednesday: </h3>
+            <!-- <li ng-repeat="day in data">
+                <blockquote>{{day.time}} {{day.job}}</blockquote> 
+            </li> -->
+          </div>
+
+          <!-- Thursday Tab -->
+          <div ng-show = "isSet(4)">
+            <h3>Volunteer Times on Thursday: </h3>
+            <!-- <li ng-repeat="day in data">
+                <blockquote>{{day.time}} {{day.job}}</blockquote>
+            </li> -->
+          </div>
+
+          <!-- Friday Tab -->
+          <div ng-show = "isSet(5)">
+            <h3>Volunteer Times on Friday: </h3>
+            <!-- <li ng-repeat="day in data">
+                <blockquote>{{day.time}} {{day.job}}</blockquote>
+            </li> -->
+          </div>
+
+          <!-- Saturday Tab -->
+          <div ng-show = "isSet(6)">
+            <h3>Volunteer Times on Saturday: </h3>
+            <!-- <li ng-repeat="day in data">
+                <blockquote>{{day.time}} {{day.job}}</blockquote>
+            </li> -->
+          </div>
+
+          <!-- Sunday Tab -->
+          <div ng-show = "isSet(7)">
+            <h3>Volunteer Times on Sunday: </h3>
+            <!-- <li ng-repeat="day in data">
+                <blockquote>{{day.time}} {{day.job}}</blockquote>
+            </li> -->
+          </div>
+
+
+        </section>
 	</div>
+
 </div>
 <footer class="footer">
   <div class="container">
