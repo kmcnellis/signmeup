@@ -5,7 +5,12 @@ angular.module('signmeupApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }];
+    },{
+      'title': 'Reoccurring',
+      'link': '/reoccurring'
+    }
+
+    ];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

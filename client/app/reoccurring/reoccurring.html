@@ -41,57 +41,57 @@
           <!-- Monday Tab -->
           <div ng-show = "isSet(1)">
 			      <h3>Volunteer Times on Monday: </h3>
-            <li ng-repeat="day in data">
-                <blockquote>{{day.time}} {{day.job}}</blockquote>  
+            <li ng-repeat="day in data[0]">
+                <blockquote><strong>{{day.time}}</strong> Job: {{day.job}} <em class="pull-right"><button type="button">Volunteer Now!</button></em></blockquote>  
             </li> 
 				  </div>
 
           <!-- Tuesday Tab -->
           <div ng-show = "isSet(2)">
             <h3>Volunteer Times on Tuesday: </h3>
-            <!-- <li ng-repeat="day in data">
-                <blockquote>{{day.time}} {{day.job}}</blockquote>
-            </li> -->
+            <li ng-repeat="day in data[1]">
+                <blockquote><strong>{{day.time}}</strong> Job: {{day.job}} <em class="pull-right"><button type="button">Volunteer Now!</button></em></blockquote>  
+            </li>
           </div>
 
           <!-- Wednesday Tab -->
           <div ng-show = "isSet(3)">
             <h3>Volunteer Times on Wednesday: </h3>
-            <!-- <li ng-repeat="day in data">
-                <blockquote>{{day.time}} {{day.job}}</blockquote> 
-            </li> -->
+            <li ng-repeat="day in data[2]">
+                <blockquote><strong>{{day.time}}</strong> Job: {{day.job}} <em class="pull-right"><button type="button">Volunteer Now!</button></em></blockquote>  
+            </li>
           </div>
 
           <!-- Thursday Tab -->
           <div ng-show = "isSet(4)">
             <h3>Volunteer Times on Thursday: </h3>
-            <!-- <li ng-repeat="day in data">
-                <blockquote>{{day.time}} {{day.job}}</blockquote>
-            </li> -->
+            <li ng-repeat="day in data[3]">
+                <blockquote><strong>{{day.time}}</strong> Job: {{day.job}} <em class="pull-right"><button type="button">Volunteer Now!</button></em></blockquote>  
+            </li>
           </div>
 
           <!-- Friday Tab -->
           <div ng-show = "isSet(5)">
             <h3>Volunteer Times on Friday: </h3>
-            <!-- <li ng-repeat="day in data">
-                <blockquote>{{day.time}} {{day.job}}</blockquote>
-            </li> -->
+            <li ng-repeat="day in data[4]">
+                <blockquote><strong>{{day.time}}</strong> Job: {{day.job}} <em class="pull-right"><button type="button">Volunteer Now!</button></em></blockquote>  
+            </li>
           </div>
 
           <!-- Saturday Tab -->
           <div ng-show = "isSet(6)">
             <h3>Volunteer Times on Saturday: </h3>
-            <!-- <li ng-repeat="day in data">
-                <blockquote>{{day.time}} {{day.job}}</blockquote>
-            </li> -->
+            <li ng-repeat="day in data[5]">
+                <blockquote><strong>{{day.time}}</strong> Job: {{day.job}} <em class="pull-right"><button type="button">Volunteer Now!</button></em></blockquote>  
+            </li>
           </div>
 
           <!-- Sunday Tab -->
           <div ng-show = "isSet(7)">
             <h3>Volunteer Times on Sunday: </h3>
-            <!-- <li ng-repeat="day in data">
-                <blockquote>{{day.time}} {{day.job}}</blockquote>
-            </li> -->
+            <li ng-repeat="day in data[6]">
+                <blockquote><strong>{{day.time}}</strong> Job: {{day.job}} <em class="pull-right"><button type="button">Volunteer Now!</button></em></blockquote>  
+            </li>
           </div>
 
 
