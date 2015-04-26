@@ -8,7 +8,11 @@ angular.module('signmeupApp')
     },{
       'title': 'Reoccurring',
       'link': '/reoccurring'
+    },{
+      'title': 'Event Sign Up',
+      'link': '/eventsignup'
     }
+
 
     ];
 
