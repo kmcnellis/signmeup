@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('signmeupApp')
-  .controller('EventsignupCtrl', function ($scope) {
+angular.module('signmeupApp',['ui.calendar','ui.bootstrap'])
+  .controller('EventsignupCtrl', '$routeProvider','$stateProvider',function ($scope, $compile, uiCalendarConfig) {
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
