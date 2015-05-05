@@ -4,7 +4,11 @@ angular.module('signmeupApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',
-      'link': '/'
+      'link': '/',
+    },
+    {
+      'title': 'Events',
+      'link': '/events',
     }];
 
     $scope.isCollapsed = true;

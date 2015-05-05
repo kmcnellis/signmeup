@@ -1,0 +1,14 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container">
+  <p> This is the event page </p>
+  <div class="col-sm-9 header-button">
+            <a class="btn btn-info" href="/events/new" title="">New Event</a>
+        </div>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="user in users">
+
+        <strong>{{event.name}}</strong><br>
+        <span class="text-muted">{{event.dates}}</span>
+    </li>
+  </ul>
+</div>
