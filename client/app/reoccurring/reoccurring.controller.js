@@ -6,33 +6,33 @@ angular.module('signmeupApp')
    //practicing with this array of times to volunteer on Monday
     var week = [
       //Monday
-      [{ time: '6:30am', job: 'Sort Food into Pantry'},
-      { time: '9:00am', job: 'Serving Breakfast'},
-      {time: '2:30pm', job: 'Serving Lunch'},
-      { time: '7:00pm', job: 'Serving Dinner'}],
+      [{ time: '6:30am', job: 'Sort Food into Pantry', isOpen: true},
+      { time: '9:00am', job: 'Serving Breakfast', isOpen: true},
+      {time: '2:30pm', job: 'Serving Lunch', isOpen: false},
+      { time: '7:00pm', job: 'Serving Dinner', isOpen: true}],
       //Tuesday
-      [{ time: '7:30am', job: 'Unloading Food into Pantry'},
-      { time: '1:00pm', job: 'Serving Lunch'},
-      { time: '7:00pm', job: 'Serving Dinner'}],
+      [{ time: '7:30am', job: 'Unloading Food into Pantry', isOpen: false},
+      { time: '1:00pm', job: 'Serving Lunch', isOpen: true},
+      { time: '7:00pm', job: 'Serving Dinner', isOpen: true}],
       //Wednesday
-      [{ time: '2:30pm', job: 'Washing Dishes'},
-      { time: '4:00pm', job: 'Prepare for Dinner Crowd'},
-      { time: '6:00pm', job: 'Serving Dinner'}],
+      [{ time: '2:30pm', job: 'Washing Dishes', isOpen: true},
+      { time: '4:00pm', job: 'Prepare for Dinner Crowd', isOpen: true},
+      { time: '6:00pm', job: 'Serving Dinner', isOpen: true}],
       //Thursday
-      [{ time: '2:30pm', job: 'Washing Dishes'},
-      { time: '9:00am', job: 'Serving Breakfast'}],
+      [{ time: '2:30pm', job: 'Washing Dishes', isOpen: true},
+      { time: '9:00am', job: 'Serving Breakfast', isOpen: true}],
       //Friday
-      [{ time: '2:30pm', job: 'Serving Lunch'},
-      { time: '6:00pm', job: 'Serving Dinner'},
-      { time: '6:30pm', job: 'Washing Dishes'}],
+      [{ time: '2:30pm', job: 'Serving Lunch', isOpen: true},
+      { time: '6:00pm', job: 'Serving Dinner', isOpen: true},
+      { time: '6:30pm', job: 'Washing Dishes', isOpen: true}],
       //Saturday
-      [{ time: '9:30am', job: 'Washing Dishes'},
-      { time: '2:00pm', job: 'Washing Dishes'}],
+      [{ time: '9:30am', job: 'Washing Dishes', isOpen: true},
+      { time: '2:00pm', job: 'Washing Dishes', isOpen: true}],
       //Sunday
-      [{ time: '8:30am', job: 'Washing Dishes'},
-      { time: '9:00am', job: 'Serving Breakfast'},
-      { time: '2:30pm', job: 'Washing Dishes'},
-      { time: '6:00pm', job: 'Serving Dinner'}],
+      [{ time: '8:30am', job: 'Washing Dishes', isOpen: true},
+      { time: '9:00am', job: 'Serving Breakfast', isOpen: true},
+      { time: '2:30pm', job: 'Washing Dishes', isOpen: true},
+      { time: '6:00pm', job: 'Serving Dinner', isOpen: true}],
 
     ];
 
@@ -53,6 +53,10 @@ angular.module('signmeupApp')
     //checking if tab is set to a value
     $scope.isSet = function(tabValue){
       return $scope.tab == tabValue;
+    };
+
+    $scope.changeOpen = function(day){
+      return $scope.day.isOpen == false;
     };
    
   })
