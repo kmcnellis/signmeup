@@ -5,6 +5,12 @@ angular.module('signmeupApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+  },{ 
+      'title': 'Reoccurring', 
+      'link': '/reoccurring' 
+  },{
+      'title': 'Event Sign Up',
+      'link': '/eventsignup'
     }];
 
     $scope.isCollapsed = true;
