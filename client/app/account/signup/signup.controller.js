@@ -12,7 +12,13 @@ angular.module('signmeupApp')
         Auth.createUser({
           name: $scope.user.name,
           email: $scope.user.email,
-          password: $scope.user.password
+          password: $scope.user.password,
+          age: $scope.user.age,
+          street: $scope.user.street,
+          city: $scope.user.city,
+          state: $scope.user.state,
+          zip: $scope.user.zip,
+          phone: $scope.user.phone
         })
         .then( function() {
           // Account created, redirect to home

@@ -9,6 +9,12 @@ var user = new User({
   name: 'Fake User',
   email: 'test@test.com',
   password: 'password'
+  age: 'age',
+  street: 'street',
+  city: 'city',
+  state: 'state',
+  zip: 'zip',
+  phone: 'phone'
 });
 
 describe('User Model', function() {
@@ -45,6 +51,54 @@ describe('User Model', function() {
   it('should fail when saving without an email', function(done) {
     user.email = '';
     user.save(function(err) {
+      should.exist(err);
+      done();
+    });
+  });
+
+  it('should fail when saving without an age', function(done){
+    user.age = '';
+    user.save(function(err){
+      should.exist(err);
+      done();
+    });
+  });
+
+  it('should fail when saving without a street', function(done){
+    user.street = '';
+    user.save(function(err){
+      should.exist(err);
+      done();
+    });
+  });
+
+  it('should fail when saving without a city', function(done){
+    user.city = '';
+    user.save(function(err){
+      should.exist(err);
+      done();
+    });
+  });
+
+  it('should fail when saving without a state', function(done){
+    user.state = '';
+    user.save(function(err){
+      should.exist(err);
+      done();
+    });
+  });
+
+  it('should fail when saving without a zip code', function(done){
+    user.zip = '';
+    user.save(function(err){
+      should.exist(err);
+      done();
+    });
+  });
+
+  it ('should fail when saving without a phone', function(done){
+    user.phone = '';
+    user.save(function(err){
       should.exist(err);
       done();
     });
