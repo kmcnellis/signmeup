@@ -24,6 +24,7 @@
     "passport-google-oauth": "latest",
     "composable-middleware": "^0.3.0",
     "connect-mongo": "^0.4.1"
+
   },
   "devDependencies": {
     "grunt": "~0.4.4",
