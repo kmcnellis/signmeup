@@ -10,11 +10,17 @@
 <div class="list-group">
  	<div class="container">
   		<div class="row">
-  			<h2 class="page-header">Pick a day of the week:</h2>
+        <h3 class="page-header">Pick a day of the week:</h3>
 
+  			<!-- directions for the user -->
+        <p>Please select the times you are available to volunteer for the next three months. The times we need volunteers are organized by the day of the week, please be sure to select the tab with day you would like to volunteer before selecting the time. Each time slot on this page has a specific job description. If you are interested in volunteering for a single time please go to the <a <a href="/eventsignup">Event Sign Up page </a>. </p> 
+        <!-- line dividing the page after the directions -->
+        <hr>
+        
+
+        <!-- Day of week Tabs -->
   			<section class= "tab" >
   				<ul class="nav nav-pills">
-  					<!-- Day of week Tabs -->
 		          <li ng-class= "{ active:isSet(1)}">
 		            <a href ng-click="setTab(1)">Monday</a> 
               </li>
