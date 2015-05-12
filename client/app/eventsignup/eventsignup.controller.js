@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('signmeupApp')
-  .controller('EventsignupCtrl', function ($scope) {
+  .controller('EventsignupCtrl', function ($scope, $compile, uiCalendarConfig) {
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -11,7 +11,7 @@ angular.module('signmeupApp')
     $scope.events = [
 		{title: 'All Day Event',start: new Date(y, m, 3)}, //all day event
 		{title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-		{title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false}
+		{title: 'Kitchen help',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false}
 	];
     //event source pulled from Google.com
     $scope.eventSource = {
