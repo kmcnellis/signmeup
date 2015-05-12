@@ -50,8 +50,8 @@
             <li ng-repeat="day in data[0]" ng-show = "day.isOpen">
                 <!-- display the time and job and a button to volunteer at this time-->
                 <blockquote><strong>{{day.time}}</strong> Job: {{day.job}} <em class="pull-right">
-                  <button type="button" ng-click="day.isOpen=false" ng-init "day.isOpen">Volunteer Now!</button></em>
-                </blockquote>  
+                  <button type="button" ng-click="changeOpen(day)">Volunteer Now!</button></em>
+                </blockquote> 
             </li> 
 				  </div>
 

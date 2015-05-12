@@ -3,6 +3,7 @@
 angular.module('signmeupApp')
   .controller('ReoccurringCtrl', function ($scope, $http) {
 
+    var cart = [ ];
    //practicing with this array of times to volunteer on Monday
     var week = [
       //Monday
@@ -55,8 +56,11 @@ angular.module('signmeupApp')
       return $scope.tab == tabValue;
     };
 
+    //change isOpen to false and add the info to the cart
     $scope.changeOpen = function(day){
-      return $scope.day.isOpen == false;
+      //$scope.cart.push([time, job, isOpen]);
+      return day.isOpen = false;
+      //$scope.console.log(cart);
     };
    
   })
