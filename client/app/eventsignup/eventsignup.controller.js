@@ -12,6 +12,7 @@ angular.module('signmeupApp')
 		{title: 'All Day Event',start: new Date(y, m, 3)}, //all day event
 		{title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
 		{title: 'Kitchen help',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false}
+
 	];
     //event source pulled from Google.com
     $scope.eventSource = {
@@ -25,10 +26,10 @@ angular.module('signmeupApp')
 		var e = new Date(end).getTime() / 1000;
 		var m = new Date(start).getMonth();
 		var events = [{title: 'Feed Me ' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
-		callback(events);
+		if (callback)callback(events);
 	};
     $scope.alertOnEventClick = function(date, jsEvent, view){
-    	$scope.alertMessage = (date.title +' was clicked ');
+    	$scope.alertMessage = ("I want to volunteer for: "+date.title );
     };
     $scope.changeView = function(view,calendar) {
 		uiCalendarConfig.calendar.fullCalendar('changeView',view);
@@ -38,7 +39,7 @@ angular.module('signmeupApp')
 			uiCalendarConfig.calendar.fullCalendar('render');
 		}
 	};
-
+	
 	 $scope.uiConfig = {
 		calendar:{
 			height: 450,
@@ -49,6 +50,7 @@ angular.module('signmeupApp')
 			right: 'today prev,next'
 			},
 		eventClick: $scope.alertOnEventClick,
+		
 
 		}
 	};

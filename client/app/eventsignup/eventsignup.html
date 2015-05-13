@@ -31,13 +31,12 @@
 			</div>
 			<div class="span8">
 				<tabset>
-					<tab select="renderCalendar('myCalendar);">
+					<tab select="renderCalendar('myCalendar');">
 						
 
-						<div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+						<!-- <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
 							<h4> {{alertMessage}}</h4>
-
-						</div>
+						</div> -->
 
 						<div class="btn-toolbar">
 							<div class="btn-group">
@@ -52,5 +51,17 @@
 				</tabset>
 			</div> 
 		</div>
+
+		<div class = "signup">
+		<h3>Click on the event you want to volunteer and fill out the following information: </h3><br>
+			
+			<div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+				<h4> {{alertMessage}}</	h4>
+			</div>
+			Date: <input ng-model="date" type="text"><br>
+			Time: <input ng-model="time" type="time"><br>
+			<button class="btn btn-success pull-right"> Volunteer Now </button>
+		</div>
 	</div>
+
 </div>
