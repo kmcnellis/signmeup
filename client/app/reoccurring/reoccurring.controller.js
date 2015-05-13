@@ -1,9 +1,12 @@
 'use strict';
 
 angular.module('signmeupApp')
-  .controller('ReoccurringCtrl', function ($scope, $http) {
+  .controller('ReoccurringCtrl', function ($scope, $http, $window) {
 
-    var cart = [ ];
+    //cart variable
+    var ca = [ ];
+    $scope.cart = ca;
+
    //practicing with this array of times to volunteer on Monday
     var week = [
       //Monday
@@ -39,12 +42,10 @@ angular.module('signmeupApp')
 
     $scope.data = week;
 
-    // $http.get('/api/reoccurring').success(function(data) {
-    //   $scope.data = data;
-    // });
-
-    //set the originail tab value to 1
+    //set the original tab value to 1
     $scope.tab = 1;
+
+    ////////////****Functions****///////////////////////
 
     //set the tab with a new value
     $scope.setTab = function(newValue){
@@ -56,11 +57,18 @@ angular.module('signmeupApp')
       return $scope.tab == tabValue;
     };
 
-    //change isOpen to false and add the info to the cart
+    //change isOpen to false and 
+    //add the info of the volunteer time to the cart
     $scope.changeOpen = function(day){
-      //$scope.cart.push([time, job, isOpen]);
+      //add this volunteer time to the cart
+      $scope.cart.push([day.time, day.job, day.isOpen]);
+
+      //print the volunteer times in the cart
+      //***working on printing the screen to the cart
+      //$window.alert(cart.join("\n"));
+
+      //change isOpen to false (to take it off of the available list)
       return day.isOpen = false;
-      //$scope.console.log(cart);
     };
    
   })
