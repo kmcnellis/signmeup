@@ -65,7 +65,7 @@ angular.module('signmeupApp')
 
       //print the volunteer times in the cart
       //***working on printing the screen to the cart
-      alert($scope.cart.join(", "));
+      alert($scope.cart.join("\n "));
 
       //change isOpen to false (to take it off of the available list)
       return day.isOpen = false;
